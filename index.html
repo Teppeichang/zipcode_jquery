@@ -14,11 +14,12 @@
     <script src="main.js"></script>
   </head>
   <body>
+    <p>郵便番号を入力してください</p>
     <form>
-      <label>郵便番号を入力してください</label>
-      <input type="text">
-      <input type="button" value="検索">
+      <input type="text" id="postalCode">
+      <input type="button" value="検索" id="searchButton">
     </form>
-    <div></div>
+    <p>検索結果</p>
+    <span id="result"></span>
   </body>
 </html>
