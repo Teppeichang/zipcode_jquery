@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zipcode</title>
     <link rel="stylesheet" href="style.css">
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="main.js"></script>
   </head>
   <body>
@@ -20,6 +16,7 @@
       <input type="button" value="検索" id="searchButton">
     </form>
     <p>検索結果</p>
+    <span id="noResults"></span>
     <span id="prefecture"></span>
     <span id="city"></span>
     <span id="townArea"></span>
