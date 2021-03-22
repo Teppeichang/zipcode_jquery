@@ -5,9 +5,11 @@ $(function() {
       dataType: 'jsonp'
     }).then(function(data) {
       if(data.results) {
+        clearResults();
         getLocation(data.results[0]);
       } else {
-        noResults();
+        clearResults();
+        $('#noResults').html('該当なし');
       }
     })
   })
@@ -18,8 +20,8 @@ $(function() {
     $('#townArea').html(data.address3);
   }
 
-  function noResults() {
-    $('#noResults').html('該当なし');
+  function clearResults(){
+    $('#noResults').html('');
     $('#prefecture').html('');
     $('#city').html('');
     $('#townArea').html('');
