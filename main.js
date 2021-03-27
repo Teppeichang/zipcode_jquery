@@ -3,7 +3,7 @@ $(function() {
     $.ajax({
       url: 'https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + $('#postalCode').val(),
       dataType: 'jsonp'
-    }).then(function(data) {
+    }).then(function(data){
       if(data.results) {
         clearResults();
         getLocation(data.results[0]);
@@ -11,6 +11,8 @@ $(function() {
         clearResults();
         $('#noResults').html('該当なし');
       }
+    }).fail(function(data){
+      alert('通信に失敗しました');
     })
   })
 
